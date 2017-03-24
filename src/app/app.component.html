@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NgSpotify</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a routerLinkActive="active" routerLink="/about"> About ngSpotify</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+    
