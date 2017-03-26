@@ -11,7 +11,7 @@ import { Artist } from '../models/artist';
 })
 export class SearchResultsComponent implements OnInit {
 
-    searchStr:string="";
+    searchStr:string=""; 
     searchResults:any[]=[];
     sortAsc:any[]=[];
     sortPop:boolean=false;

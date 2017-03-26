@@ -4,12 +4,15 @@
       <a class="navbar-brand" href="#">NgSpotify</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a routerLinkActive="active" routerLink="/about"> About ngSpotify</a></li>
+      <li [ngClass]="{'active':homeActive , 'disabled': isDisabled}"(click)="homeActive"><a href="#">Home</a></li>
+      <li><a routerLinkActive="active" routerLink="/about" [ngClass]="{'active': aboutActive, 'disabled': isDisabled}" (click)="aboutActive"> About ngSpotify</a></li>
       
     </ul>
   </div>
 </nav>
 
 <router-outlet></router-outlet>
-    
+
+<div class="clearfix"></div>
+
+<div class="panel-footer">NgSpoptify</div>

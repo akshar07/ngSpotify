@@ -11,11 +11,12 @@ import { SpotifyService } from './service/spotify.service';
 import { Http,HttpModule } from '@angular/http';
 import { OrderByPipe } from './orderby';
 import { AboutComponent } from './about.component';
+import { ArtistComponent } from './artist/artist.component';
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,
                 RouterModule.forRoot(ROUTES,{useHash:true}) ],
-  declarations: [ AppComponent,SearchResultsComponent,OrderByPipe,AboutComponent ],
+  declarations: [ AppComponent,SearchResultsComponent,OrderByPipe,AboutComponent,ArtistComponent ],
   bootstrap:    [ AppComponent ],
   providers:[SpotifyService]
 })
