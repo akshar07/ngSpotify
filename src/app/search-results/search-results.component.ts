@@ -9,13 +9,13 @@ import { Artist } from '../models/artist';
    
 
 })
-export class SearchResultsComponent implements OnInit {
+export class SearchResultsComponent {
 
     searchStr:string=""; 
     searchResults:any[]=[];
     sortAsc:any[]=[];
     sortPop:boolean=false;
-    sortType:boolean=false;
+    sortArtist:boolean=false;
     
     
     constructor(private spotifyService:SpotifyService) { }
@@ -29,8 +29,8 @@ export class SearchResultsComponent implements OnInit {
      });
     }
      sortData(){
-    this.sortType=!this.sortType;
-        if(this.sortType==true){
+    this.sortArtist=!this.sortArtist;
+        if(this.sortArtist==true){
          this.searchResults.sort((a:any,b:any)=>{
                 if(a.name<b.name ){
                     return -1;
@@ -57,5 +57,4 @@ export class SearchResultsComponent implements OnInit {
         }
        
         }
-    ngOnInit() { }
 }
