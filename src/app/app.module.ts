@@ -11,12 +11,13 @@ import { SpotifyService } from './service/spotify.service';
 import { Http,HttpModule } from '@angular/http';
 import { AboutComponent } from './about.component';
 import { ArtistComponent } from './artist/artist.component';
+import { SpeechRecognitionService } from './speech-service/speech.service';
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,
                 RouterModule.forRoot(ROUTES,{useHash:true}) ],
   declarations: [ AppComponent,SearchResultsComponent,AboutComponent,ArtistComponent ],
   bootstrap:    [ AppComponent ],
-  providers:[SpotifyService]
+  providers:[SpotifyService,SpeechRecognitionService]
 })
 export class AppModule { }
